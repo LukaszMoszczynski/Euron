@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/omu8gkx.css");
+// @import url("https://use.typekit.net/omu8gkx.css");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600');
 
 //reset browser css
@@ -39,7 +39,7 @@ html, body {
 }
 
 h1 {
-	font-size: 12rem;
+	font-size: 10rem;
 	font-weight: 600;
 	@media only screen and (max-width: 991px) {
 		font-size: 2.5rem;
@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-	font-size: 4.5rem;
+	font-size: 4.0rem;
 	font-weight: 600;
 	@media only screen and (max-width: 991px) {
 		font-size: 2.0rem;
@@ -78,11 +78,17 @@ a {
  	margin-right: 0;
 }
 
+section {
+	padding: 80px 0;
+}
+
 .button {	
 	color: $main-color;
 	font-weight: 600;
 	height: 50px;
 	width: 150px;
+	box-shadow: none;
+	border: none;
 	cursor: pointer;
 	margin: 0; 
 	display: flex;
@@ -145,7 +151,8 @@ header {
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	background-color: $forth-color;
+	background-color: lightblue;
+	background-attachment: fixed;
 	nav {	
 		color: $second-color;
 		transition: 0.5s;
@@ -178,7 +185,7 @@ header {
 		}	
 	}
 	.home-text--main{
-		max-width: 775px;
+		max-width: 665px;
 		.home-text--main-subtext {
 			color: $main-color;
 			display: flex;
@@ -198,182 +205,67 @@ header {
 	}
 }
 
-
-.about {	
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	height: 50vh;
-	@media only screen and (max-width: 1440px) {
-		height: auto;	
-		margin: 100px 0;	
-	} 
-	@media only screen and (max-width: 767px) {
-		height: auto;
-	}
-	@media only screen and (max-width: 577px) {
-		padding: 0;						
-	} 
-	.col-xl-9 {
-		z-index: 2;
-		text-align: center;
-		padding: 0;
-		@media only screen and (max-width: 577px) {
-			padding: 0 1rem;
-		}
-		h3 {
-			color: $second-color;
-			line-height: 1.5;
-		}
-		p {
-			margin: 50px 0 0;
-			text-align: justify;
-			span {
-				display: table;
-				margin-left: auto;
-   				margin-right: auto;
-			}
-		}
-	}
-	.image {
-		position: relative;
-		padding: 0;	
-		@media only screen and (max-width: 1199px) {
-			position: static;		
-			text-align: center;
-			margin: 50px 0 0;
-			display: flex;
-			justify-content: center;
-		} 	
-		@media only screen and (max-width: 577px) {
-			margin: 25px 0;	
-		} 
-		img {
-			position: absolute;
-			top: 50%;
-			left: 100%;
-			transform: translate(-50%, -50%);
-			transform-origin: top left;
-			@media only screen and (max-width: 1640px) {
-				transform: scale(0.8);	
-				top: 0;
-				left: 10%;	
-			} 
-			@media only screen and (max-width: 1420px) {
-				transform: scale(0.7);	
-				top: 10%;	
-			} 
-			@media only screen and (max-width: 1250px) {
-				transform: scale(0.65);	
-				top: 10%;	
-			} 
-			@media only screen and (max-width: 1199px) {
-				position: static;	
-				transform: scale(1);		
-			} 
-			@media only screen and (max-width: 500px) {
-				transform: scale(0.8);		
-				transform-origin: center;
-			} 
-		}
-	}
-}
-
-
 .stats {
-	color: $main-color;
-	background-color: $second-color;
-	padding: 50px 0;
 	text-align: center;
-	.col-md-4 {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-	}
-	h1 {
-		.counter {
-			font-size: inherit;
-		}
-		font-size: 5.8rem;		
-		font-family: canada-type-gibson, sans-serif;
-		font-weight: 600;
-		font-style: normal;
-		@media only screen and (max-width: 1399px) {
-			font-size: 4.5rem;				
-		} 
-		@media only screen and (max-width: 991px) {
-			font-size: 3.5rem;				
-		} 
+	background-color: $forth-color;
+	color: $main-color;
+
+	h2:nth-of-type(2) {
+		margin-bottom: 50px;
 		span {
-			font-size: 1.5rem;
+			color: $second-color;
 		}
 	}
-	h3 {
-		font-size: 2.1rem;
-		@media only screen and (max-width: 1399px) {
-			font-size: 2rem;				
-		} 
+
+	h3:nth-of-type(2){
+		color: $third-color;
+		margin-bottom: 30px;
+	}
+
+	.stats-text {
+		color: $second-color;
+		margin-bottom: 60px;
+	}
+
+	.counter {
+		color: $third-color;
+		margin-bottom: 20px;
 	}
 }
-
 
 .offer {
-	padding: 100px 0;
 	background-image: url(../images/bg.png);
 	background-repeat: no-repeat;
   	background-position: center;
   	background-size: cover;
   	background-attachment: fixed;
-  	@media only screen and (max-width: 577px) {
-		padding: 50px 0;				
-	}
-  	.container {
-  		div:nth-of-type(2), div:nth-of-type(3){
-  			padding-left: 20px;
-  			@media only screen and (max-width: 577px) {
-				display: block;			
-			}
-  		}
-  	}
-  	p {
-  		font-size: 15px;
-  	}
+	text-align: center;
 	.col-sm-12 {
-		padding-bottom: 35px;
-		@media only screen and (max-width: 577px) {
-			padding-bottom: 10px;			
-		}
-		h1 {
-			color: $third-color;
-			text-align: center;
-			font-family: canada-type-gibson, sans-serif;
-			font-weight: 600;
-			font-style: normal;
+		padding-bottom: 10px;
+		@media only screen and (min-width: 577px) {
+			padding-bottom: 35px;			
 		}
 		h3 {
 			color: $second-color;
 			margin: 50px 0;
 			padding: 0 20px;
-			font-weight: 400;
-			text-align: center;
 		}
 	}
 	.col-lg-6 {
 		margin: 45px 0;
 		opacity: 0;
-		@media only screen and (max-width: 577px) {
-			text-align: center;
+		text-align: center;
+		@media only screen and (min-width: 577px) {
+			text-align: left;
 		}
-		h3 {
-			color: $main-color;
-			@media only screen and (max-width: 577px) {
-				padding: 20px 0 10px;
-			}
+		h4 {
+			font-weight: 600;
+			color: $second-color;
+			font-size: 18px;
+			padding: 20px 0 10px;
 		}
 		.circle {
-			border: 5px solid $main-color;
+			border: 5px solid $third-color;
 			border-radius: 50%;
 			width: 150px;			
 			height: 150px;
@@ -381,7 +273,6 @@ header {
 			align-items: center;
 			justify-content: center;
 			transition: 0.5s ease-in-out;
-			opacity: 0.7;
 			@media only screen and (min-width: 992px) and (max-width: 1199px) {
 				width: 120px;			
 				height: 120px;
@@ -392,7 +283,6 @@ header {
 			}
 			&:hover{
 				transform: scale(1.05);
-				opacity: 1;
 			}	
 			&:hover img {
 				transform: rotate(360deg);
@@ -405,17 +295,13 @@ header {
 				@media only screen and (min-width: 992px) and (max-width: 1199px) {
 					transform: scale(0.8);
 				}
-			}	
-			.owl {
-				margin-left: 10px;
 			}		
 		}
 		.col-sm-4 {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-		}
-		.col-sm-4 {
+
 			@media only screen and (max-width: 577px) {
 				display: flex;
 				justify-content: center;
@@ -423,9 +309,6 @@ header {
 		}
 	}
 }
-
-
-
 
 // owl-carousel fix
 .owl-carousel .owl-item img {
@@ -610,20 +493,9 @@ header {
 }
 
 footer {
-	.container {
-		p {
-			margin: 25px 0;
-			color: $third-color;
-		}
-	}
-	div:nth-of-type(2) {
-		padding: 25px 0;
-		text-align: center;
-		background-color: $third-color;
-		color: $main-color;
-		p {
-			margin-bottom: 0;
-			color: inherit;
-		}
-	}
+	font-weight: 400;
+	background-color: $second-color;
+	color: $main-color;
+	padding: 25px 0;
+	text-align: center;
 }

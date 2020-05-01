@@ -58,7 +58,6 @@ $(document).ready(function(){
 	
 	$(window).scroll(function() {
 
-		const headerTopOffset = $('.header-text').offset().top;
 		const statsTopOffset = $('.stats').offset().top;
 		const offerTopOffset = $('.offer-text').offset().top;
 		const offerIconsTopOffset = $('#offerIconsTop').offset().top;
@@ -66,9 +65,9 @@ $(document).ready(function(){
 		const contactTopOffset = $('#contact').offset().top;
 
 
-		if( $(window).width() > 767 && window.pageYOffset > headerTopOffset - $(window).height() +200) {
-			$('nav').addClass('navbar-background');
-		}
+		// if( $(window).width() > 767 && window.pageYOffset > headerTopOffset - $(window).height() +200) {
+		// 	$('nav').addClass('navbar-background');
+		// }
 
 
 		if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 150) {
