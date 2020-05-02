@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,700");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -62,6 +62,11 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
 p {
   font-size: 1.125rem;
 }
@@ -103,6 +108,7 @@ section {
   background-position: 100% 0;
   background-size: 500%;
   background-color: #a7413f;
+  border: 1px solid #a7413f;
 }
 
 .button:focus {
@@ -230,7 +236,7 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   margin-bottom: 20px;
 }
 
-.offer {
+.about {
   background-image: url(../images/bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -239,42 +245,40 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   text-align: center;
 }
 
-.offer .col-sm-12 {
+.about .col-sm-12 {
   padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 577px) {
-  .offer .col-sm-12 {
+  .about .col-sm-12 {
     padding-bottom: 35px;
   }
 }
 
-.offer .col-sm-12 h3 {
+.about .col-sm-12 h3 {
   color: #26304f;
   margin: 50px 0;
   padding: 0 20px;
 }
 
-.offer .col-lg-6 {
+.about .col-lg-6 {
   margin: 45px 0;
   opacity: 0;
   text-align: center;
 }
 
 @media only screen and (min-width: 577px) {
-  .offer .col-lg-6 {
+  .about .col-lg-6 {
     text-align: left;
   }
 }
 
-.offer .col-lg-6 h4 {
-  font-weight: 600;
+.about .col-lg-6 h4 {
   color: #26304f;
-  font-size: 18px;
   padding: 20px 0 10px;
 }
 
-.offer .col-lg-6 .circle {
+.about .col-lg-6 .circle {
   border: 5px solid #a7413f;
   border-radius: 50%;
   width: 150px;
@@ -289,44 +293,44 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .offer .col-lg-6 .circle {
+  .about .col-lg-6 .circle {
     width: 120px;
     height: 120px;
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .offer .col-lg-6 .circle {
+  .about .col-lg-6 .circle {
     width: 130px;
     height: 130px;
   }
 }
 
-.offer .col-lg-6 .circle:hover {
+.about .col-lg-6 .circle:hover {
   transform: scale(1.05);
 }
 
-.offer .col-lg-6 .circle:hover img {
+.about .col-lg-6 .circle:hover img {
   transform: rotate(360deg);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .offer .col-lg-6 .circle:hover img {
+  .about .col-lg-6 .circle:hover img {
     transform: scale(0.8) rotate(360deg);
   }
 }
 
-.offer .col-lg-6 .circle img {
+.about .col-lg-6 .circle img {
   transition: 0.5s ease-in-out;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .offer .col-lg-6 .circle img {
+  .about .col-lg-6 .circle img {
     transform: scale(0.8);
   }
 }
 
-.offer .col-lg-6 .col-sm-4 {
+.about .col-lg-6 .col-sm-4 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -336,7 +340,7 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 }
 
 @media only screen and (max-width: 577px) {
-  .offer .col-lg-6 .col-sm-4 {
+  .about .col-lg-6 .col-sm-4 {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -344,122 +348,160 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   }
 }
 
-.owl-carousel .owl-item img {
-  display: block;
-  width: auto;
-}
-
-.owl-stage {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.owl-dots {
+.offer {
   text-align: center;
+  background-color: #9aa8c3;
 }
 
-.owl-dots .owl-dot {
-  height: 20px;
-  width: 20px;
-  margin: 0 5px;
-  border-radius: 20px;
-  border: solid 2px #ede9e7 !important;
-  background-color: transparent;
+.offer h2 {
+  color: #26304f;
+  margin-bottom: 50px;
 }
 
-.owl-dots .owl-dot:focus {
-  outline: none;
+.offer h2 span {
+  color: #a7413f;
 }
 
-.owl-dots .active {
-  background-color: white !important;
+.offer h3, .offer .offer-text {
+  color: #ede9e7;
 }
 
-.quote {
+.offer h3 {
+  margin-bottom: 30px;
+}
+
+.offer .offer-text {
+  margin-bottom: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  .offer .offer-row:nth-of-type(1) {
+    margin-bottom: 75px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(1), .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(3) {
+    background-color: #9aa8c3;
+  }
+  .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(2) {
+    background-color: #ede9e7;
+  }
+}
+
+.offer .offer-box:nth-of-type(2) {
+  background-color: #9aa8c3;
+}
+
+.offer .offer-box {
+  color: #26304f;
+  padding: 20px 40px 40px;
+  background-color: #ede9e7;
+  margin-bottom: 20px;
+  transition: 0.5s ease-in;
+}
+
+.offer .offer-box .offer-box-items {
+  transition: 0.5s ease-in;
+}
+
+.offer .offer-box h4 {
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .offer .offer-box:hover {
+    background-color: #26304f;
+    transform: scaleY(1.2);
+  }
+  .offer .offer-box:hover .offer-box-items {
+    color: #ede9e7;
+    transform: scaleY(calc(1/1.2));
+  }
+}
+
+.portfolio {
   background-image: url(../images/blue_bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 50px 0;
-}
-
-.quote img {
-  height: 50px;
-  width: 50px;
-  margin: 25px 0;
-}
-
-.quote p {
-  color: inherit;
-  padding: 0 20px;
-  font-size: 1.2rem;
   text-align: center;
-  font-weight: 200;
+  color: #26304f;
 }
 
-.quote .quotation {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+.portfolio h2 {
+  margin-bottom: 70px;
 }
 
-.quote .signature {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  font-weight: 600;
-  font-style: italic;
-  padding-right: 15px;
+.portfolio h2 span {
+  color: #ede9e7;
 }
 
-.quote .signature p {
-  text-align: right;
+.portfolio h3 {
+  margin-bottom: 100px;
+}
+
+.portfolio h3 span {
+  color: #a7413f;
 }
 
 .contact {
   background-color: #ede9e7;
-  padding: 100px 0;
+  color: #26304f;
+  padding: 40px 0;
 }
 
 .contact h4 {
-  border-bottom: 2px solid #ede9e7;
-  color: #ede9e7;
   margin-bottom: 30px;
-  font-weight: 600;
   display: inline-block;
 }
 
 .contact .formData {
-  line-height: 2;
+  min-height: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   padding-right: 100px;
 }
 
-@media only screen and (max-width: 577px) {
+.contact .formData-items > * {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.contact .formData-copy {
+  font-size: 1rem;
+}
+
+.contact .formData a {
+  display: block;
+  cursor: pointer;
+  color: inherit;
+}
+
+@media only screen and (max-width: 767px) {
   .contact .formData {
     padding-right: 0.5rem;
+    margin-top: 50px;
   }
-}
-
-.contact .formData p {
-  font-size: 14px;
-}
-
-.contact .formData p:nth-of-type(2) {
-  font-style: italic;
-  font-weight: 600;
-  float: right;
 }
 
 .contact .form-message {
   text-align: center;
-  color: #ede9e7;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.contact .form-message h6 {
+  margin-bottom: 20px;
 }
 
 .contact .form {
@@ -498,7 +540,7 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 
 .contact .form .input-container input:focus {
   outline: none;
-  color: #a7413f;
+  color: #26304f;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -522,15 +564,15 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 
 .contact .form textarea:focus {
   outline: none;
-  color: #a7413f;
+  color: #26304f;
 }
 
 .contact .form textarea:-ms-input-placeholder, .contact .form input:-ms-input-placeholder {
-  color: #a7413f;
+  color: #26304f;
 }
 
 .contact .form textarea::placeholder, .contact .form input::placeholder {
-  color: #a7413f;
+  color: #26304f;
 }
 
 .form-hide {
