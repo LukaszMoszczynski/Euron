@@ -1,5 +1,5 @@
 <?php
-$mailToSend = 'maksn@wordkraft.pl';
+$mailToSend = 'office@euron-online.pl';
 if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$name       = $_POST['name'];
 	$email      = $_POST['email'];
@@ -21,7 +21,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	} else {
 		$headers = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-		$headers .= 'From: maksn@wordkraft.eu' . "\r\n";
+		$headers .= 'From: office@euron-online.pl' . "\r\n";
 		$headers .= 'Reply-to: ' . $email;
 		$message = "
 			<html>

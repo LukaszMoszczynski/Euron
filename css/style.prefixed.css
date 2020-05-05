@@ -30,35 +30,59 @@ html, body {
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 577px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 10rem;
   }
 }
 
 h2 {
-  font-size: 4.0rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 577px) {
   h2 {
-    font-size: 2.0rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 4rem;
   }
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 992px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -120,6 +144,43 @@ section {
   color: #a7413f;
 }
 
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.zoomInUp {
+  animation-name: zoomInUp;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
 .hamburger.is-active .hamburger-inner, .hamburger-inner {
   background-color: #26304f;
 }
@@ -133,17 +194,20 @@ section {
 }
 
 header {
+  background-image: url(../images/planes.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 100vh;
+  color: #26304f;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  background-color: lightblue;
   background-attachment: fixed;
 }
 
 header nav {
-  color: #26304f;
   transition: 0.5s;
   background: rgba(237, 233, 231, 0.8);
 }
@@ -163,6 +227,19 @@ header nav .navbar-collapse {
 
 header nav .navbar-collapse .nav-item {
   padding: 0 1rem;
+}
+
+@media only screen and (min-width: 972px) {
+  header nav .navbar-collapse .nav-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+
+header nav .navbar-collapse .nav-item img {
+  width: 40px;
 }
 
 header nav .navbar-collapse a {
@@ -194,9 +271,21 @@ header .home-text--main .home-text--main-subtext {
       align-items: center;
 }
 
+@media only screen and (max-width: 576px) {
+  header .home-text--main .home-text--main-subtext {
+    margin-top: 20px;
+  }
+}
+
 header .home-text--second {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 577px) {
+  header .home-text--second {
+    margin-top: 100px;
+  }
 }
 
 header .home-text--second h3:nth-of-type(1) {
@@ -233,16 +322,25 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 
 .stats .counter {
   color: #a7413f;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 577px) {
+  .stats .counter {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
 }
 
 .about {
-  background-image: url(../images/bg.png);
+  background-image: url(../images/planes2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
+  color: #26304f;
 }
 
 .about .col-sm-12 {
@@ -256,13 +354,12 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 }
 
 .about .col-sm-12 h3 {
-  color: #26304f;
-  margin: 50px 0;
+  margin-bottom: 50px;
   padding: 0 20px;
 }
 
 .about .col-lg-6 {
-  margin: 45px 0;
+  margin: 20px 0;
   opacity: 0;
   text-align: center;
 }
@@ -270,11 +367,11 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 @media only screen and (min-width: 577px) {
   .about .col-lg-6 {
     text-align: left;
+    margin: 45px 0;
   }
 }
 
 .about .col-lg-6 h4 {
-  color: #26304f;
   padding: 20px 0 10px;
 }
 
@@ -339,15 +436,6 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
       align-items: center;
 }
 
-@media only screen and (max-width: 577px) {
-  .about .col-lg-6 .col-sm-4 {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-  }
-}
-
 .offer {
   text-align: center;
   background-color: #9aa8c3;
@@ -399,6 +487,7 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   background-color: #ede9e7;
   margin-bottom: 20px;
   transition: 0.5s ease-in;
+  box-shadow: 5px 16px 10px -5px rgba(0, 0, 0, 0.75);
 }
 
 .offer .offer-box .offer-box-items {
@@ -421,11 +510,10 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 }
 
 .portfolio {
-  background-image: url(../images/blue_bg.png);
+  background-image: url(../images/planes3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   text-align: center;
   color: #26304f;
 }
@@ -444,6 +532,15 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 
 .portfolio h3 span {
   color: #a7413f;
+}
+
+.portfolio .testimony {
+  color: #a7413f;
+  text-align: justify;
+}
+
+.portfolio .testimony p:nth-of-type(2) {
+  text-align: right;
 }
 
 .contact {
@@ -610,10 +707,18 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 }
 
 footer {
-  font-weight: 400;
   background-color: #26304f;
-  color: #ede9e7;
   padding: 25px 0;
   text-align: center;
+}
+
+footer p, footer a {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #ede9e7;
+}
+
+footer a:hover {
+  color: #a7413f;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
