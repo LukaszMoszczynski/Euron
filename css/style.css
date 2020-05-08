@@ -246,6 +246,9 @@ header .home-text--main {
 }
 
 @media only screen and (max-width: 576px) {
+  header .home-text--main {
+    text-align: center;
+  }
   header .home-text--main h1 {
     margin-top: 20px;
   }
