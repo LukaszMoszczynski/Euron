@@ -116,6 +116,9 @@ section {
 	}
 }
 
+.logo {
+	height: 50px;
+} 
 .animated {
 	animation-duration: 1s;
 	animation-fill-mode: both;
@@ -175,6 +178,7 @@ header {
 	display: flex;
 	align-items: center;
 	background-attachment: fixed;
+	
 	nav {	
 		background: $main-color;
 	  	.navbar-toggler {
@@ -249,7 +253,6 @@ header {
 	text-align: center;
 	background-color: $forth-color;
 	color: $main-color;
-
 	h2:nth-of-type(2) {
 		margin-bottom: 50px;
 		span {
@@ -343,6 +346,7 @@ header {
 				}
 			}	
 			img {
+				height: 80px;
 				transition: 0.5s ease-in-out;
 				@media only screen and (min-width: 992px) and (max-width: 1199px) {
 					transform: scale(0.8);

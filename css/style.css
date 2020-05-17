@@ -132,6 +132,10 @@ section {
   color: #a7413f;
 }
 
+.logo {
+  height: 50px;
+}
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -412,6 +416,7 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 }
 
 .about .col-lg-6 .circle img {
+  height: 80px;
   transition: 0.5s ease-in-out;
 }
 
