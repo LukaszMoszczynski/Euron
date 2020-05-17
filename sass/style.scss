@@ -176,11 +176,7 @@ header {
 	align-items: center;
 	background-attachment: fixed;
 	nav {	
-		transition: 0.5s;
-		background: rgba($main-color, 0.8);	
-		&:hover {
-			background: rgba($main-color, 1);
-		}
+		background: $main-color;
 	  	.navbar-toggler {
 	  		&:focus {
 	  			outline: none;
@@ -452,6 +448,34 @@ header {
 		p:nth-of-type(2) {
 			text-align: right;
 		}
+	}
+	p {
+		line-height: 1.4;
+	}
+	.owl-prev, .owl-next {
+		padding: 0 10px;
+		&:focus {
+			outline: none;
+		}
+		span {
+			font-size: 60px;
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		.owl-prev, .owl-next {
+			position: absolute;
+			top: 40%;
+			transform: translateY(-50%);
+			display: block !important;
+			span {
+				font-size: 80px;
+				&:hover {
+					font-size: 90px;
+				}
+			}
+		}
+		.owl-prev { left: -50px; }
+		.owl-next { right: -50px; }
 	}
 }
 

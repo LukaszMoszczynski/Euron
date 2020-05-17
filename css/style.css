@@ -194,11 +194,6 @@ header {
 }
 
 header nav {
-  transition: 0.5s;
-  background: rgba(237, 233, 231, 0.8);
-}
-
-header nav:hover {
   background: #ede9e7;
 }
 
@@ -539,6 +534,43 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 
 .portfolio .testimony p:nth-of-type(2) {
   text-align: right;
+}
+
+.portfolio p {
+  line-height: 1.4;
+}
+
+.portfolio .owl-prev, .portfolio .owl-next {
+  padding: 0 10px;
+}
+
+.portfolio .owl-prev:focus, .portfolio .owl-next:focus {
+  outline: none;
+}
+
+.portfolio .owl-prev span, .portfolio .owl-next span {
+  font-size: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio .owl-prev, .portfolio .owl-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    display: block !important;
+  }
+  .portfolio .owl-prev span, .portfolio .owl-next span {
+    font-size: 80px;
+  }
+  .portfolio .owl-prev span:hover, .portfolio .owl-next span:hover {
+    font-size: 90px;
+  }
+  .portfolio .owl-prev {
+    left: -50px;
+  }
+  .portfolio .owl-next {
+    right: -50px;
+  }
 }
 
 .contact {

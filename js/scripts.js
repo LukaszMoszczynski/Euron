@@ -4,10 +4,10 @@ $(document).ready(function(){
 	$('.owl-carousel').owlCarousel({
 		loop:true,
 	    margin:30,
-	    nav: false,
+	    nav: true,
 	    dots: false,
 	    autoplay:true,
-		autoplayTimeout:15000,
+		autoplayTimeout:8000,
 		autoplayHoverPause:true,
 		smartSpeed:650,
 		responsive:{
