@@ -1,17 +1,84 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,700");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,9 +87,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 * {
@@ -173,15 +241,18 @@ section {
   animation-name: fadeInDown;
 }
 
-.hamburger.is-active .hamburger-inner, .hamburger-inner {
+.hamburger.is-active .hamburger-inner,
+.hamburger-inner {
   background-color: #26304f;
 }
 
-.hamburger.is-active .hamburger-inner:before, .hamburger-inner:before {
+.hamburger.is-active .hamburger-inner:before,
+.hamburger-inner:before {
   background-color: #26304f;
 }
 
-.hamburger.is-active .hamburger-inner:after, .hamburger-inner:after {
+.hamburger.is-active .hamburger-inner:after,
+.hamburger-inner:after {
   background-color: #26304f;
 }
 
@@ -284,7 +355,8 @@ header .home-text--second h3:nth-of-type(1) {
   color: #a7413f;
 }
 
-header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of-type(2) {
+header .home-text--second h3:nth-of-type(1),
+header .home-text--second h3:nth-of-type(2) {
   margin-bottom: 0.5rem;
 }
 
@@ -446,7 +518,8 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   color: #a7413f;
 }
 
-.offer h3, .offer .offer-text {
+.offer h3,
+.offer .offer-text {
   color: #ede9e7;
 }
 
@@ -466,7 +539,18 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
 }
 
 @media only screen and (max-width: 767px) {
-  .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(1), .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(3) {
+  .offer .offer-row:nth-of-type(1) .offer-box:nth-of-type(1) {
+    background-color: #9aa8c3;
+  }
+  .offer .offer-row:nth-of-type(1) .offer-box:nth-of-type(2),
+  .offer .offer-row:nth-of-type(1) .offer-box:nth-of-type(3) {
+    background-color: #ede9e7;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(1),
+  .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(3) {
     background-color: #9aa8c3;
   }
   .offer .offer-row:nth-of-type(2) .offer-box:nth-of-type(2) {
@@ -502,7 +586,7 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   }
   .offer .offer-box:hover .offer-box-items {
     color: #ede9e7;
-    transform: scaleY(calc(1/1.2));
+    transform: scaleY(calc(1 / 1.2));
   }
 }
 
@@ -545,29 +629,36 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   line-height: 1.4;
 }
 
-.portfolio .owl-prev, .portfolio .owl-next {
-  padding: 0 10px;
+.portfolio .owl-prev,
+.portfolio .owl-next {
+  margin: 0 40px;
 }
 
-.portfolio .owl-prev:focus, .portfolio .owl-next:focus {
+.portfolio .owl-prev:focus,
+.portfolio .owl-next:focus {
   outline: none;
 }
 
-.portfolio .owl-prev span, .portfolio .owl-next span {
+.portfolio .owl-prev span,
+.portfolio .owl-next span {
   font-size: 60px;
 }
 
 @media only screen and (min-width: 768px) {
-  .portfolio .owl-prev, .portfolio .owl-next {
+  .portfolio .owl-prev,
+  .portfolio .owl-next {
+    margin: 0 10px;
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
     display: block !important;
   }
-  .portfolio .owl-prev span, .portfolio .owl-next span {
+  .portfolio .owl-prev span,
+  .portfolio .owl-next span {
     font-size: 80px;
   }
-  .portfolio .owl-prev span:hover, .portfolio .owl-next span:hover {
+  .portfolio .owl-prev span:hover,
+  .portfolio .owl-next span:hover {
     font-size: 90px;
   }
   .portfolio .owl-prev {
@@ -690,7 +781,8 @@ header .home-text--second h3:nth-of-type(1), header .home-text--second h3:nth-of
   color: #26304f;
 }
 
-.contact .form textarea::placeholder, .contact .form input::placeholder {
+.contact .form textarea::placeholder,
+.contact .form input::placeholder {
   color: #26304f;
 }
 
@@ -749,7 +841,8 @@ footer div p {
   margin-left: 10px;
 }
 
-footer div p, footer div a {
+footer div p,
+footer div a {
   font-weight: 400;
   font-size: 0.75rem;
   color: #ede9e7;
